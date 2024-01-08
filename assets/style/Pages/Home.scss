@@ -2,7 +2,7 @@
 
 .cardContainerTwoOverflow {
 	overflow: auto;
-	height: 400px;
+	height: 90vh;
 }
 
 .cardContainerTwoOverflow::-webkit-scrollbar {
@@ -28,7 +28,7 @@
 	border-radius: 10px;
 	box-shadow: 0 10px 20px 0 rgba(#999, .25);
 	padding: .75rem;
-	height: 60vh;
+	height: 90vh;
 
 
 	.homeOneInput {
