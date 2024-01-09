@@ -2,153 +2,136 @@
 
 .cardContainerTwoOverflow {
 	overflow: auto;
-	height: 90vh;
+	height: 70vh;
 }
-
-.cardContainerTwoOverflow::-webkit-scrollbar {
-	width: 5px;
-}
-
-.cardContainerTwoOverflow::-webkit-scrollbar-track {
-  background: rgb(243, 243, 243);   
-	border-radius: 20px;       
-}
-.cardContainerTwoOverflow::-webkit-scrollbar-thumb {
-  background-color: rgb(207, 207, 207); 
-  border-radius: 20px;     
-}
-
-.containerHome {
-	margin: 2rem auto;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	max-width: 425px;
-	background-color: #FFF;
-	border-radius: 10px;
-	box-shadow: 0 10px 20px 0 rgba(#999, .25);
-	padding: .75rem;
-	height: 90vh;
 
 
 	.homeOneInput {
-		margin-left: 5px;
+		margin-top: 20px;
+		margin-left: 20px;
 
 		.welcomeText {
 			font-size: 20px;
 			font-family: 'Noto Sans', sans-serif;
-			color: #6658d3;
+			color: rgb(218, 218, 218);
 		}
 	}
 
 	.cardsContainer {
-		width: 100%;
-		background-color: rgba(255, 0, 0, 0);
-		height: 35vh;
 		display: flex;
-		flex-direction: column;
-		margin-top: 20px;
+		justify-content: center;
 		align-items: center;
 		
-		
-
-		.cardApplication {
-			width: 97%;
+		.cardBorder {
+			margin-top: 20px;
+			width: 90%;
+			height: 60vh;
 			border-radius: 10px;
-			position: relative;
-			z-index: 0;
+			background-color:  #111111;
 
-			.textsItemCard {
+			.cardImg {
 				width: 100%;
-				flex-direction: column;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				z-index: 2;
-				position: absolute;
+				height: 35vh;
+				border-radius: 10px 10px 0 0;
+			}
 
-				.itemNamed {
+			.divItemCardOne {
+				.cardNamed {
+					margin-left: 10px;
+					font-family: 'Noto Sans', sans-serif;
+					color: rgb(255, 255, 255);
+					font-size: 20px;
+					margin-top: 5px;
+				}
+
+				.cardTag {
+					margin-left: 10px;
+					font-size: 13px;
+					margin-top: 5px;
+					font-family: 'Noto Sans', sans-serif;
+					color: rgb(218, 218, 218);
+				}
+
+				.faceItem {
 					display: flex;
-					justify-content: center;
-					align-items: center;
-					text-align: center;
-					height: 35px;
-					width: 70%;
-					background: #000000d4;
-					border-radius: 0 0 10px 10px;
-					box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-					backdrop-filter: blur(50.9px);
-					-webkit-backdrop-filter: blur(50.9px);
-					border: 1px solid rgba(255, 255, 255, 0.57);
+					margin-top: 20px;
+
+					.imgCardFace {
+						width: 30px;
+					}
+
+					.miniFaceOne {
+						background-color: #36E0DD;
+						width: 35px;
+						height: 35px;
+						border-radius: 35px;
+						z-index: 1;
+						margin-left: 10;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					.miniFaceTwo {
+						background-color: #9A9298;
+						width: 35px;
+						height: 35px;
+						border-radius: 35px;
+						z-index: 2;
+						margin-left: -15;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					.miniFaceThree {
+						background-color: #FEB244;
+						width: 35px;
+						height: 35px;
+						border-radius: 35px;
+						z-index: 3;
+						margin-left: -15;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+
+					.divItemNumberAndVacansy {
+						margin-left: 10px;
+
+						.numberPeople {
+							font-size: 15px;
+							margin-top: -2;
+							color: white;
+							font-family: 'Noto Sans', sans-serif;
+						}
+						
+						.seeThisIsVacnsy {
+							font-size: 13px;
+							line-height: 10px;
+							color: rgb(198, 198, 198);
+						}
+					}
+
+					.btnOpenToCard {
+						width: 70px;
+						background-color: rgba(0, 0, 0, 0.55);
+						height: 30px;
+						margin-left: 10px;
+						margin-top: 2px;
+						color: white;
+						border: none;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						border-radius: 50px;
+						cursor: pointer;
+					}
 				}
-
-				
 			}
-
-			.groupPriceAndActiv {
-				z-index: 2;
-				position: absolute;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-
-				.itemPrice {
-					margin-top: 230px;
-					margin-left: 20px;
-					font-size: 18px;
-
-					.namedTextPrice {
-						font-weight: bold;
-						color: white;
-					}
-
-					.namedMeaning {
-						color: white;
-					}
-
-					.namedTextPriceT {
-						font-weight: bold;
-						color: white;
-						margin-left: 60px;
-					}
-
-					.namedMeaningT {
-						color: white;
-						margin-left: 60px;
-					}
-				}
-			}
-		
-
-			.divTexts {
-				z-index: 2;
-				position: absolute;
-			}
-
-			.namecArdApplication {
-				color: #ffffff;
-				font-family: 'Noto Sans', sans-serif;
-				font-size: 17px;
-			}
-
-			.pricecArdApplication {
-				color: #ffffff;
-				font-family: 'Noto Sans', sans-serif;
-				font-size: 23px;
-			}
-			
-		}
-
-		.cardImg {
-			width: 100%;
-			border-radius: 10px;
-			filter: brightness(50%);
-			position: absolute;
-			z-index: 1;
-			height: 300px;
-		}
+		}	
 	}
-}
+
 
 .rub {
 	font-family: arial;

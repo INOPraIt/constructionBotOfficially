@@ -5,11 +5,11 @@ import CardApplication from '../../assets/components/CardApplication';
 
 export default () => {
   let arrayCardApplication = [
-    { id: 1, named: "Покраска", price: 40000, tag: '@fronter' },
-    { id: 2, named: "Оклейка", price: 40000, tag: '@fronter' },
-    { id: 3, named: "Штукатурка", price: 40000, tag: '@fronter' },
-    { id: 4, named: "Постройка", price: 40000, tag: '@fronter' },
-  ]
+    { id: 1, named: "Покраска стен", price: 40000, tag: '@fronter' },
+    { id: 2, named: "Поклейка обоев", price: 40000, tag: '@fronter' },
+    { id: 3, named: "Установка окон", price: 40000, tag: '@fronter' },
+    { id: 4, named: "Укладка ламината", price: 40000, tag: '@fronter' },
+  ];
 
   return (
     <div className='containerHome'>
@@ -31,16 +31,25 @@ export default () => {
           в систему
         </motion.p>
       </div>
-      <div className='cardContainerTwoOverflow'>
-        {arrayCardApplication.map(k =>
-          <CardApplication
-            key={k.id}
-            named={k.named}
-            price={k.price}
-            tag={k.tag}
-          />
-        )}
-      </div>
+      <motion.div
+        className='cardContainerTwoOverflow'
+        initial={{ y: 10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.9 }}
+      >
+        <swiper-container>
+          {arrayCardApplication.map(k =>
+            <swiper-slide>
+              <CardApplication
+                key={k.id}
+                named={k.named}
+                price={k.price}
+                tag={k.tag}
+              />
+            </swiper-slide>
+          )}
+        </swiper-container>
+      </motion.div>
     </div>
   )
 }

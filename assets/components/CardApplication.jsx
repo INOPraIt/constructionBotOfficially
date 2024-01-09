@@ -1,5 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import oneFace from '../img/1.png';
+import twoFace from '../img/2.png';
+import threeFace from '../img/3.png';
 
 export default ({
   named,
@@ -7,35 +10,50 @@ export default ({
   tag
 }) => {
   return (
-    <>
-      <motion.div
-        className='cardsContainer'
-        initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.9 }}
-      >
-        <div className='cardApplication'>
-          <div className='textsItemCard'>
-            <div className='itemNamed'>
-              <p className='namecArdApplication'>{named}</p>
+    <div className='cardsContainer'>
+      <div className='cardBorder'>
+        <img
+          src='https://images.wallpaperscraft.ru/image/single/dron_kamera_tehnologii_171576_1280x720.jpg'
+          className='cardImg'
+        />
+        <div className='divItemCardOne'>
+          <div className='itemPriceAndNamed'>
+            <p className='cardNamed'>
+              Вакансия: {named}
+            </p>
+            <p className='cardTag'>
+              Tagname telegram: {tag}
+            </p>
+            <div className='faceItem'>
+              <div className='miniFaceOne'>
+                <img
+                  className='imgCardFace'
+                  src={oneFace}
+                />
+              </div>
+              <div className='miniFaceTwo'>
+                <img
+                  className='imgCardFace'
+                  src={twoFace}
+                />
+              </div>
+              <div className='miniFaceThree'>
+                <img
+                  className='imgCardFace'
+                  src={threeFace}
+                />
+              </div>
+              <div className='divItemNumberAndVacansy'>
+                <p className='numberPeople'>865 исполнителей</p>
+                <p className='seeThisIsVacnsy'>просмотрела эту<br/>вакансию</p>
+              </div>
+              <button className='btnOpenToCard'>
+                Открыть
+              </button>
             </div>
           </div>
-          <div className='groupPriceAndActiv'>
-            <div className='itemPrice'>
-              <p className='namedTextPrice'>Примерная цена</p>
-              <p className='namedMeaning'>{price}<span class="rub">Р</span></p>
-            </div>
-            <div className='itemPrice'>
-              <p className='namedTextPriceT'>Тэг автора:</p>
-              <p className='namedMeaningT'>{tag}</p>
-            </div>
-          </div>
-          <img
-            src='https://alpakospb.ru/wp-content/uploads/2022/09/painting-contractor-orlando-2.jpg'
-            className='cardImg'
-          />
         </div>
-      </motion.div>
-    </>
+      </div>
+    </div>
   )
 }
